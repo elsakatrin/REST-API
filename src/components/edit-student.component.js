@@ -11,7 +11,7 @@ export default function EditStudent () {
   const {id} = useParams();
   useEffect (()=> {
 
-    axios.get('http://localhost:4000/students/edit-student/' + id)
+    axios.get('https://rest-api-backend.vercel.app/students/edit-student/' + id)
       .then(res => {
         this.setState({
           name: res.data.name,
@@ -40,7 +40,7 @@ export default function EditStudent () {
       email,
       rollno
     };
-    axios.put('http://localhost:4000/students/update-student/' + id, studentObject)
+    axios.put('https://rest-api-backend.vercel.app/students/update-student/' + id, studentObject)
       .then((res) => {
         console.log(res.data)
         console.log('Student successfully updated')

@@ -11,7 +11,7 @@ export default class StudentList extends Component {
     };
   }
   componentDidMount() {
-    axios.get('http://localhost:4000/students/')
+    axios.get('https://rest-api-backend.vercel.app/students/')
       .then(res => {
         this.setState({
           students: res.data
